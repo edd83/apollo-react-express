@@ -31,7 +31,6 @@ const TYPEDEFS = gql`
 
     type Mutation {
       addContact(id: String!, firstName: String!, lastName: String!): Contact
-      removeContact(id: String!): Contact
     }
 `;
 
@@ -44,11 +43,6 @@ const resolvers = {
       const newContact = { id: args.id, firstName: args.firstName, lastName: args.lastName};
       contacts.push(newContact);
       return newContact;
-    },
-    removeContact: (root, args) => {
-      console.log(contacts.indexOf(args.id));
-      contacts.splice(contacts.indexOf(args.id), 1);
-      return contacts.indexOf(args.id);
     },
   }
 };
