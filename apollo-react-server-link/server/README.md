@@ -1,4 +1,4 @@
---- Launch the server (Do not forget to launch the client) ---
+# --- Launch the server (Do not forget to launch the client) ---
 
 
 npm install
